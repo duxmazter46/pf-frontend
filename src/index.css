@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Custom styles for the range slider */
 input[type="range"].range-slider {
   -webkit-appearance: none;
