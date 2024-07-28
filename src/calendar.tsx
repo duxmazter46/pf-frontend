@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import axios from 'axios';
-import { TodoItem } from './types'; // Adjust the import path if necessary
+import { TodoItem } from './types'; 
 
 const Calendar: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(dayjs());
@@ -13,7 +13,7 @@ const Calendar: React.FC = () => {
     // Fetch tasks from the API
     const fetchTasks = async () => {
       try {
-        const response = await axios.get<TodoItem[]>('/api/todo'); // Adjust the API endpoint if necessary
+        const response = await axios.get<TodoItem[]>('/api/todo'); 
         setTasks(response.data);
       } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -95,7 +95,7 @@ const Calendar: React.FC = () => {
             Tasks for {selectedDate.format('DD MMMM YYYY')}
           </h2>
           {tasksForSelectedDate.length > 0 ? (
-            <div className="overflow-y-auto max-h-48"> {/* Added styles for scrollable container */}
+            <div className="overflow-y-auto max-h-48"> 
               <ul>
                 {tasksForSelectedDate.map(task => (
                   <li key={task.id} className="p-2 border-b border-gray-300">
